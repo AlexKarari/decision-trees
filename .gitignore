@@ -1,0 +1,70 @@
+# =============================================================================
+# Decision Trees: .gitignore
+# =============================================================================
+
+# ── Data files ──────────────────────────
+data/*.csv
+data/*.tsv
+data/*.json
+data/*.parquet
+data/*.xlsx
+
+# ── Trained model artifacts (large binary files — use artifact store) ──────
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pt
+
+# Keep .gitkeep placeholder files so empty dirs are tracked
+!data/.gitkeep
+!models/.gitkeep
+
+# ── Jupyter notebook checkpoints ──────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Python bytecode ────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# ── Python packaging artifacts ────────────────────────────────────────────
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Virtual environments ───────────────────────────────────────────────────
+venv/
+env/
+.env/
+.venv/
+
+# ── Environment variables ──────────────────────────
+.env
+*.env.local
+
+# ── IDE / editor files ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── macOS system files ────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Windows system files ──────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Logs ──────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Visualisations (generated — reproducible from notebook) ───────────────
+# Uncomment the line below if you want to exclude generated plots
+visualisations/*.png
